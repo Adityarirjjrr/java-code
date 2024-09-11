@@ -25,12 +25,12 @@ public class arr_2 {
             System.out.println(brr[i]+" ");
         }
 
-        int crr[]=new int[n];
+       /* int crr[]=new int[n];
         for(int i=0;i<5;i++){
              crr[i]= arr[i];
              crr [i+5]=brr[i];
             System.out.println(crr[i]+" ");
-        }
+        }*/
     }
 }
 
