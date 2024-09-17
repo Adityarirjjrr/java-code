@@ -1,27 +1,37 @@
 import java.util.Scanner;
 public class Loginmodule_1 {
-    int b=0;
-    void Login() {
+    int b=0,counter=0;
+    char ch;
+    boolean Login() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Password: ");
         String pass = sc.nextLine();
 
-       /* for(int i=0;i<pass.length();i++) {
-            char ch = pass.charAt(i);
+        for(int i=0;i<pass.length();i++) {
+             ch = pass.charAt(i);
+
+            if(!(pass.length()>=8)){
+                System.out.println("Error : Must have at least 8 characters");
+                break;
+            }
 
             if(!Character.isLetterOrDigit(ch)) {
-                System.out.println("Invalid password,Must have at least one letter");
+                System.out.println("Error : Must have at least one letter");
+                break;
+            }
+            if(Character.isDigit(ch)) {
+                counter ++;
             }
 
-        }*/
-
-        char ch=pass.charAt(0);
-        if(!Character.isLetter(ch)) {
-            if(!Character.isDigit(ch)) {
-                System.out.println("Invalid Password,You have must one digit in your password");
-            }
         }
 
+        if(counter >2) {
+
+            System.out.println("error: You have must more than 2 digit in your password");
+        }
+
+
+        return false;
     }
     public static void main(String[] args) {
         Loginmodule_1 obj = new Loginmodule_1();
