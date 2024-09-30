@@ -1,25 +1,26 @@
- class fact {
-    static int factorial(int n) {
-        int fibo = 1;
-        for (int i = 2; i <= n; i++) {
-            fibo *= i;
+import java.util.Scanner;
+class fact {
+   int fibt(int n) {
+        if(n<=1){
+            return 1;
         }
-        return fibo;
+
+        return fibt(n-1)+fibt(n-2);
     }
+
 }
 public class fibonaci {
     public static void main(String[] args) {
-        int n = 10; // number of terms
-        int t1 = 0;
-        int t2 = 1;
-        System.out.print(n + "  Fibonacci series with factorial: ");
-        for (int i = 1; i <= n; ++i) {
-            System.out.print(t1 + "! = " + fact.factorial(t1) + " + ");
-            int sum = t1 + t2;
-            t1 = t2;
-            t2 = sum;
+        fact obj = new fact();
+      Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int n = sc.nextInt();
+        for(int i=0;i<=n;i++){
+            System.out.print(obj.fibt(i)+ " ");
         }
+        int fact=obj.fibt(n);
+        System.out.println(fact);
     }
-    }
+}
 
 

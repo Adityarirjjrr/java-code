@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class test {
+ class test {
     int factorial(int n) {
         if(n<=1) {
             return 1;
